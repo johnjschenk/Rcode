@@ -1,4 +1,7 @@
-# Sliding window analysis taken from MEREDITH, R. W., J. E. JANEčKA, J. GATESY, O. A. RYDER, C. A. FISHER, E. C. TEELING, A. GOODBLA, et al. 2011. Impacts of the Cretaceous terrestrial revolution and KPg extinction on mammal diversification. Science 334: 521–524 and coded in R for Steppan and Schenk "Muroid Rodent Phylogenetics: 900-species Tree Reveals Increasing Diversification Rates" 2017. Coded by J. Schenk.
+# Sliding window analysis taken from MEREDITH, R. W., J. E. JANEčKA, J. GATESY, O. A. RYDER, C. A. FISHER, E. C. TEELING, A. GOODBLA, 
+# et al. 2011. Impacts of the Cretaceous terrestrial revolution and KPg extinction on mammal diversification. Science 334: 521–524
+# and coded in R for Steppan and Schenk "Muroid Rodent Phylogenetics: 900-species Tree Reveals Increasing Diversification Rates" 2017. 
+# Coded by J. Schenk.
 
 
 Sliding.Window <- function(window, phy){
