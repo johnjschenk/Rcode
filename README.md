@@ -2,7 +2,7 @@
 
 R code used in various studies.
 Use at own risk.
-Please report any issues to jschenk@georgiasouthern.edu
+Please report any issues to schenk@ohio.edu
 
 
 
