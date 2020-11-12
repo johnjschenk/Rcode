@@ -1,0 +1,23 @@
+#Function takes a set of nexus formatted trees from a posterior distribution and plots the posterior density of patristic distances for two tips in the phylogeny. This example uses ultrametric trees generated in Beast.  The function requires the ape library to operate.  Col command allows for variation in the color of the plotted density line.  The output of this function is a posterior density plot of patristic distances.
+#Code by John J. Schenk, Ohio University, 12 November 2020
+
+PostPat <- function(trees, tip1, tip2, col = "black"){
+	require(ape)
+	trees <- .uncompressTipLabel(trees)
+	Results <- matrix(data = NA, nrow = length(trees), ncol = 1)
+	for(i in 1:length(trees)){
+		m <- cophenetic.phylo(trees[[i]])
+		#if your tree tips have single quotes, make sure they are included or this 
+		#function will not call the correct tips.  
+		Results[i, ] <- m[tip1, tip2]
+	}
+	#Un-comment out the line below if you would like to see the patristic distance values
+	#print(Results)
+	plot(density(Results), main = "", las = 1, xlab = "Patristic distance (mybp)", lwd = 2, col = col)
+}
+
+
+
+
+#Example run command from my data.  If your tree tips have single quotes, make sure they are included or this function will not call the correct tips. 
+PostPat(trees, tip1 = "'minima.1987.2'", tip2 = "'chartaceae.2002.3'", col = "red")
